@@ -9,6 +9,5 @@ public class LoginMap {
     public By loginBtn() { return MobileBy.AndroidUIAutomator("new UiSelector().text(\"LOG IN\")");}
     public By errorMessage() { return By.id("android:id/message");}
     public By okButton() {return By.id("android:id/button1");}
-
 }
 

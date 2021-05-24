@@ -11,16 +11,12 @@ public class TestQA_App extends BaseTest {
     QAPage qaPage = new QAPage();
     
     @Test(groups = {"smoke"}, enabled = true)
-    public void tc_Test() throws InterruptedException {
-        
-//        loginPage.login();
-//        qaPage.nativeView();
-//        qaPage.back();
-//        qaPage.longPress();
-//        qaPage.back();
-          loginPage.loginWrongPassword();
-          qaPage.verticalSwipe();
-          qaPage.carousel();
+    public void tc_Test()  {
+        loginPage.login();
+        qaPage.nativeView();
+        qaPage.back();
+        qaPage.longPress();
+        qaPage.back();
 
     }
 

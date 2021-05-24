@@ -13,11 +13,13 @@ public void login(){
    mobileCommands.tap(loginMap.loginBtn());
 }
 
-public void loginWrongPassword()  {
+public void loginWrongPassword() {
     mobileCommands.enterText(loginMap.passwordField(), "admin123", true);
     mobileCommands.tap(loginMap.loginBtn());
     mobileCommands.assertElementExists(loginMap.errorMessage(), true);
     mobileCommands.tap(loginMap.okButton());
+}
+public void loginRightPassword() {
     mobileCommands.enterText(loginMap.passwordField(), "admin", true);
     mobileCommands.tap(loginMap.loginBtn());
 }

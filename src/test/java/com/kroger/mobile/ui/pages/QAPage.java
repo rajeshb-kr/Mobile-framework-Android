@@ -30,11 +30,12 @@ public class QAPage {
     }
 
     public void verticalSwipe () {
-        mobileCommands.assertElementExists(qaMap.loginSuccessLabel(), true);
-        mobileCommands.tap(qaMap.verticalSwipe());
+        mobileCommands.waitForElementVisibility(qaMap.loginSuccessLabel());
+        mobileCommands.tap(qaMap.verticalSwipeLabel());
         mobileCommands.assertElementExists(qaMap.verticalSwipeLabel(), true);
         mobileCommands.scrollDown();
         back();
+
     }
 
     public void carousel () {
