@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 53.865 s <<< FAILURE! - in TestSuite
-tc_Test(com.kroger.mobile.cases.TestQA_App)  Time elapsed: 41.536 s  <<< FAILURE!
-java.lang.AssertionError: The By.xpath: //android.widget.TextView[@content-desc="carousel"] was not found, or is not enabled
-	at com.kroger.mobile.cases.TestQA_App.tc_Test(TestQA_App.java:23)
-
