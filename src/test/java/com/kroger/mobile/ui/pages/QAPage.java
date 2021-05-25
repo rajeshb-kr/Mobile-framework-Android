@@ -18,9 +18,19 @@ public class QAPage {
 
     public void back(){
         mobileCommands.tap(qaMap.back());
-
     }
 
+    public void scrollDown() {
+        mobileCommands.scrollDown();
+    }
+
+    public void swipeRight() {
+        mobileCommands.swipeRight();
+    }
+
+    public void swipeLeft() {
+        mobileCommands.swipeLeft();
+    }
     public void longPress (){
         mobileCommands.tap(qaMap.longPress());
         mobileCommands.assertElementExists(qaMap.longPressLabel(),true);
@@ -28,24 +38,18 @@ public class QAPage {
         mobileCommands.tap(qaMap.okBtn());
 
     }
+    public void loginSuccessLabel() {
+        mobileCommands.waitForElementVisibility(qaMap.loginSuccessLabel());
+    }
 
     public void verticalSwipe () {
-        mobileCommands.waitForElementVisibility(qaMap.loginSuccessLabel());
         mobileCommands.tap(qaMap.verticalSwipeLabel());
         mobileCommands.assertElementExists(qaMap.verticalSwipeLabel(), true);
-        mobileCommands.scrollDown();
-        back();
-
     }
 
     public void carousel () {
-        mobileCommands.waitForElementVisibility(qaMap.loginSuccessLabel());
-        mobileCommands.scrollDown();
         mobileCommands.tap(qaMap.carousel());
         mobileCommands.assertElementExists(qaMap.carouselLabel(), true);
-        mobileCommands.swipeRight();
-        mobileCommands.swipeRight();
-        mobileCommands.swipeLeft();
-        back();
     }
+
 }
